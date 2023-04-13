@@ -24,3 +24,14 @@ mytranspose <- function(x) {
   }
   return(y)
 }
+
+# Test the function with each test case
+for (i in seq_along(myvar1_test_cases)) {
+  result <- mytranspose(myvar1_test_cases[[i]][[1]])
+  expected <- myvar1_test_cases[[i]][[2]]
+  if (!identical(result, expected)) {
+    cat("Test case", i, "failed\n")
+  } else {
+    cat("Test case", i, "passed\n")
+  }
+}
